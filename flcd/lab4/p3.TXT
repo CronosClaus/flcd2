@@ -1,0 +1,19 @@
+f int main()
+#
+	let int n, sum <- -1;
+	
+	write ("give_the_number_of_elements_of_the_array_");
+	read (n);
+	
+	let int v[n];
+	
+	for (let int i <- 1 | i < n | i +<- -1)
+	#
+		read (v[i]);
+
+		sum +<- v[i];
+	#
+
+	write ("the_sum_of_the_" n "_numbers_is_" sum);
+	ret 0
+#

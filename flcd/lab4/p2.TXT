@@ -1,0 +1,23 @@
+f int main()
+#
+	let int a;
+	
+	read (a);
+	
+	check (a % 2 = 0)
+	#
+		write ("not_prime");
+	#
+	
+	for (let int div <- 3 | div < (a / 2) | div +<- 2)
+	#
+		check (a % div = 0)
+		#
+			write ("not_prime");
+			ret 0;
+		#
+	#
+	
+	write ("prime");
+	ret 0
+#

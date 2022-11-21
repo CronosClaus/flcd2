@@ -17,13 +17,19 @@ class FA:
             ok = False
             for tr in self.__transitions:
                 for trr in self.__transitions[tr]:
-                    if symbol == self.__transitions[tr][trr] and tr == currState:
-                        ok = True
-                        currState = trr
-                        continue
+                    if isinstance(self.__transitions[tr][trr], list):
+                        if symbol in self.__transitions[tr][trr] and tr == currState:
+                            ok = True
+                            currState = trr
+                            continue
+                    else:
+                        if symbol == self.__transitions[tr][trr] and tr == currState:
+                            ok = True
+                            currState = trr
+                            continue
             if not ok:
                 return False
-        return currState in self.__finalStates
+        return True
 
     def readFromFile(self, fileName):
         with open(fileName, "r") as f:
@@ -86,9 +92,7 @@ class FA:
             line = f.readline()
             while line:
                 if self.isAccepted(line.strip()):
-                    print(line.strip() + " is accepted by the FA")
-                else:
-                    print(line.strip() + " is not accepted by the FA")
+                    print(line.strip() + " is accepted bu the FA")
                 line = f.readline()
 
 
@@ -197,16 +201,6 @@ class Scanner:
 
 
 if __name__ == '__main__':
-    file = "FA_identifier.in"
-    fa = FA()
-    fa.readFromFile(file)
-    fa.checkDFA("fa_test.in")
-
-'''
-file = {line}
-line = state '=' '{' state ':' alphanum {',' state ':' alphanum} '}'
-state = ['*']alpha['+']
-alphanum = alpha | num
-alpha = 'a' | 'b' | ... | 'z'
-num = '0' | '1' | '2' | ... | '9'
-'''
+    file = "p1err.TXT"
+    s = Scanner()
+    s.scan(file)

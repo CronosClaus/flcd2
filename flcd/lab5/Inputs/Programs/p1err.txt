@@ -1,0 +1,17 @@
+{
+    string asdf";
+    integer awhilen2;
+    integer #n3@;
+    if (n1 >= n2 and n1 >= n3)
+    {
+        ret n1;
+    }
+    else if [n2 >= n1 and n2 >= n3]
+    {
+        ret n2;
+    }
+    else
+    {
+        ret n3;
+    }
+}

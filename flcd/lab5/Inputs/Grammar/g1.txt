@@ -1,0 +1,35 @@
+program
+operators ::= "+" | "-" | "*" | "/" | "%" | "<" | ">" | "<=" | "=" | ">="
+separators ::= "[" | "]" | "{" | "}" | ":" | ";" | ","
+reserved_words ::= "if" | "integer" |  "ret" | "else" | "while" | "string" | "foreach" | "in" | "or" | "read" | "write"
+identifier ::= letter_list | letter_list digit_list
+letter_list ::= letter | letter letter_list
+digit_list ::= digit | digit digit_list
+letter ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+digit ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+noconst ::= "+" no | "-" no | no
+no ::= non_zero_digit | non_zero_digit digit_list | "0"
+non_zero_digit ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+character ::= letter | digit | symbol
+constchar ::= """ string """
+string ::= character | character string
+program ::= cmpdstmt
+decllist ::= declaration | declaration ";" decllist
+declaration ::= type identifier ";"
+type1 ::= "integer" | "string" | "bool" | "float"
+arraydecl ::= type1 "[" "]" identifier
+type  ::= type1 | arraydecl
+cmpdstmt ::= "{" stmtlist "}"
+stmtlist ::= stmt | stmt ";" stmtlist
+stmt ::= simplstmt | structstmt
+simplstmt ::= assignstmt | iostmt
+assignstmt ::= identifier "=" factor
+expression ::= id_or_noconst | id_or_noconst operators expression
+id_or_noconst ::= identifier | noconst
+factor ::= "(" expression ")" | identifier
+iostmt ::= "read()" | "write" "(" identifier ")"
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+ifstmt ::= "if" "(" condition ")" cmpdstmt "else" "{" cmpdstmt "}" | "if" "(" condition ")" cmpdstmt
+whilestmt ::= "while" "(" condition ")" cmpdstmt
+condition ::= expression RELATION expression
+RELATION ::= "<" | "<=" | "==" | ">" | ">="

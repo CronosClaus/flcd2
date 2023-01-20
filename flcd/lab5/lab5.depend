@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1674036862 source:d:\codeblocksprojects\flcd\lab3\lab5\main.cpp
+	"SymbolTable.h"
+	"Grammar.h"
+	"LL_ParsingTable.h"
+
+1670252114 d:\codeblocksprojects\flcd\lab3\lab5\symboltable.h
+	<string>
+	<list>
+	<iostream>
+
+1670252134 d:\codeblocksprojects\flcd\lab3\lab5\grammar.h
+	<list>
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<set>
+	<algorithm>
+	<map>
+	"ProductionRule.h"
+
+1670252156 d:\codeblocksprojects\flcd\lab3\lab5\productionrule.h
+	<list>
+	<string>
+
+1671463495 d:\codeblocksprojects\flcd\lab3\lab5\ll_parsingtable.h
+	<list>
+	<string>
+	"Grammar.h"
+	"ProductionRule.h"
+	<map>
+	<utility>
+	<vector>
+
+1670252306 source:d:\codeblocksprojects\flcd\lab3\lab5\grammar.cpp
+	"Grammar.h"
+
+1670252327 source:d:\codeblocksprojects\flcd\lab3\lab5\productionrule.cpp
+	"ProductionRule.h"
+
+1671463480 source:d:\codeblocksprojects\flcd\lab3\lab5\ll_parsingtable.cpp
+	"LL_ParsingTable.h"
+
+1670854940 source:d:\codeblocksprojects\flcd\lab3\lab5\symboltable.cpp
+	"SymbolTable.h"
+

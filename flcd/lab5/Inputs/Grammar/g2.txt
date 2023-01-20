@@ -1,0 +1,6 @@
+S
+S ::= B A
+A ::= "+" B A | eps
+B ::= D C
+C ::= "*" D C | eps
+D ::= "(" S ")" | "a"

@@ -1,0 +1,11 @@
+{
+    integer[] numberlist;
+    numberlist = [1,2,3,4,5];
+    integer result = 0
+    foreach number in numberlist
+    {
+        result = result + number;
+    }
+    write(result);
+    ret result;
+}

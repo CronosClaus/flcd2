@@ -1,0 +1,5 @@
+test
+test ::= test1 | test2 test3
+test1 ::= "asdf" | eps
+test2 ::= "qwer" | eps
+test3 ::= "zxcv"

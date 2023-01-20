@@ -1,0 +1,17 @@
+{
+    integer nr;
+    nr = read();
+    if (nr == 0 or nr == 1)
+    {
+        ret false;
+    }
+    integer divisor = 2;
+    while (divisor <= nr / 2)
+    {
+        if (nr % divisor == 0)
+        {
+            ret false;
+        }
+    }
+    ret true;
+}

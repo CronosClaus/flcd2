@@ -1,0 +1,23 @@
+{
+    integer "n1    asdf ";
+    integer n2;
+    integer n5;
+    n1 = read();
+    n2 = read();
+    n3 = read();
+    if (n1 >= n2 and n1 >= n3)
+    {
+    	write(n1);
+        ret n1;
+    }
+    else if (n2 >= n1 and n2 >= n3)
+    {
+    	write(n2);
+        ret n2;
+    }
+    else
+    {
+    	write(n3);
+        ret n3;
+    }
+}
